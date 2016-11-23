@@ -1,10 +1,10 @@
 <?php
 include '../inc/fac.php';
 if(isset($_POST['type']) && 'ajax'===$_POST['type']){
-	$text = trim($_POST['text']);
-	$id = trim($_POST['id']);
-	echo fac::makeHtml($id,$text);
-	exit;
+    $text = trim($_POST['text']);
+    $id = trim($_POST['id']);
+    echo fac::makeHtml($id,$text);
+    exit;
 }
 ?>
 <!Doctype html>
@@ -19,13 +19,13 @@ if(isset($_POST['type']) && 'ajax'===$_POST['type']){
 <body>
 <div style="width:960px" class="border" id='content'>
 <div id="title">
-	<span class="content" style="width:30px;text-align: center;background-color: #aaa"><b>选择</b></span>
-	<span class="content" style="width:680px;padding-left: 20px;background-color: #aaa"><b>电影名</b></span>
-	<span class="content" style="width:150px;background-color: #aaa"><b>时间</b></span>
-	<span class="content" style="width:80px;text-align: center;background-color: #aaa"><b>大小</b></span>
+    <span class="content" style="width:30px;text-align: center;background-color: #aaa"><b>选择</b></span>
+    <span class="content" style="width:680px;padding-left: 20px;background-color: #aaa"><b>电影名</b></span>
+    <span class="content" style="width:150px;background-color: #aaa"><b>时间</b></span>
+    <span class="content" style="width:80px;text-align: center;background-color: #aaa"><b>大小</b></span>
 </div>
 <?php
-	echo fac::makeHtml('','');
+    echo fac::makeHtml('','');
 ?>
 </div>
 </body>
