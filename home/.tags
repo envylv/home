@@ -1,0 +1,13 @@
+data	/Users/lvxin/git/github/home/inc/data.php	/^class data{$/;"	class	line:3
+getData	/Users/lvxin/git/github/home/inc/data.php	/^    public function getData($path){$/;"	function	line:4
+path	/Users/lvxin/git/github/home/inc/data.php	/^        $path = conf::$root.$path."\/";$/;"	variable	line:5
+array	/Users/lvxin/git/github/home/inc/data.php	/^        $array = array();$/;"	variable	line:6
+content	/Users/lvxin/git/github/home/inc/data.php	/^        $content = array();$/;"	variable	line:7
+key	/Users/lvxin/git/github/home/inc/data.php	/^        foreach ($array as $key => $value) {$/;"	variable	line:9
+value	/Users/lvxin/git/github/home/inc/data.php	/^                    $value = str_replace('  ',' ',$value);$/;"	variable	line:14
+tmp	/Users/lvxin/git/github/home/inc/data.php	/^                $tmp = split(' ', trim($value));$/;"	variable	line:16
+conf	/Users/lvxin/git/github/home/inc/conf.php	/^class conf{$/;"	class	line:2
+root	/Users/lvxin/git/github/home/inc/conf.php	/^    public static $root = '\/home\/Envy\/disk1\/movie';$/;"	variable	line:3
+root	/Users/lvxin/git/github/home/inc/conf.php	/^    public static $root = '\/home\/Envy\/disk1\/movie';$/;"	variable	line:3
+filter_chars	/Users/lvxin/git/github/home/inc/conf.php	/^    public static $filter_chars = array($/;"	variable	line:4
+filter_chars	/Users/lvxin/git/github/home/inc/conf.php	/^    public static $filter_chars = array($/;"	variable	line:4
