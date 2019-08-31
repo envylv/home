@@ -7,10 +7,10 @@ var List = List || {
     item_count   : 12,//单页总数
     current_num  : 0,//当前数
     set_id       : "",//电影集id
-    get_count_url: "../api/get_count.php",//获取总数api地址
-    get_list_url : "../api/get_list.php",//获取列表api地址
-    list_url     : "list.php?id=:id",
-    item_url     : "view.php?type=:type&id=:id",
+    get_count_url: "/api/get_count",//获取总数api地址
+    get_list_url : "/api/get_list",//获取列表api地址
+    list_url     : "/videoList/movie/:id",
+    item_url     : "/videoShow/movie/:id",
     init: function() {
         List.op.get_set_id();
         List.op.get_line_count();
@@ -99,7 +99,7 @@ List.bind = {
             if("set" == id.substring(0,3)) {
                 url = List.list_url.replace(":id", id.replace("set_",""));
             } else {
-                url = List.item_url.replace(":type","m").replace(":id",id.replace("movie_",""));
+                url = List.item_url.replace(":id",id.replace("movie_",""));
             }
             var a = $("<a href='"+url+"'"+target+">open</a>").get(0);
             var e = document.createEvent('MouseEvent');

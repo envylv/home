@@ -6,9 +6,9 @@ var Show_list = Show_list || {
     all_count    : 0,//总数
     item_count   : 12,//单页总数
     current_num  : 0,//当前数
-    get_count_url: "../api/get_count.php",//获取总数api地址
-    get_list_url : "../api/get_list.php",//获取列表api地址
-    item_url     : "show_view.php?id=:id",
+    get_count_url: "/api/get_count",//获取总数api地址
+    get_list_url : "/api/get_list",//获取列表api地址
+    item_url     : "/videoShow/show/:id",
     init: function() {
         Show_list.op.get_line_count();
         Show_list.op.get_line();
