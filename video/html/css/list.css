@@ -1,0 +1,49 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, "Microsoft Yahei", Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif, arial;
+    font-size: 16px;
+    color: #00faff;
+    background-color: #000000;
+    margin: 0;
+}
+ul {
+	list-style: none;
+}
+.list {
+    width: 100%;
+    min-height: 250px;
+}
+
+ul li {
+    float: left;
+}
+
+ul li:hover {
+    cursor: pointer;
+}
+
+ul li div {
+    text-align: center;
+}
+
+ul li div.pic {
+    width: 200px;
+    height: 300px;
+    display: block;
+    margin: 10px;
+    box-shadow: 0 0 10px #00faff;
+}
+
+ul li div.pic:hover {
+    box-shadow: 0 0 30px #00a6ff;
+}
+
+ul li div.name {
+    height: 24px;
+    width: 220px;
+    overflow: hidden;
+}
+
+ul li img {
+    width: 200px;
+    height:300px;
+}
