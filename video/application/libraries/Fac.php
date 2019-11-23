@@ -141,7 +141,7 @@ class fac {
         $info['company'] = $array['company'];
         $info['poster_url'] = empty($poster)?"":$this->CI->tools->getPic($poster, 1, 0);
         $back_url = empty($back)?"":$this->CI->tools->getPic($back, 0, 0);
-        $info['back_url'] = (!empty($poster) && false===strpos($back_url, 'https://'))?$back['url'].$back_url:$back_url;
+        $info['back_url'] = (!empty($poster) && false===strpos($back_url, 'https://') && isset($back['url']))?$back['url'].$back_url:$back_url;
         $info['premiered'] = $array['premiered'];
         $info['size'] = $this->CI->tools->get_file_size($this->config['pre_path'], $array['path'], true);
         $info['rating'] = $array['rating'];
