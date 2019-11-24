@@ -13,12 +13,9 @@ class data extends CI_Model {
     public function getMovieCount() {
         $count = 0;
         $sql = "SELECT * FROM (
-            SELECT idMovie, idSet FROM movie_view  WHERE ISNULL(idSet)
+            SELECT idMovie FROM movie_view  WHERE ISNULL(idSet)
             UNION
-            SELECT idMovie, idSet AS poster FROM (
-                SELECT idMovie, idSet FROM movie_view WHERE !ISNULL(idSet) ORDER BY premiered DESC
-            ) AS t
-            GROUP BY t.idSet
+            SELECT idMovie FROM movie_view WHERE !ISNULL(idSet) GROUP BY idSet
         ) AS tt";
         $query = $this->db->query($sql);
         $count = $query->num_rows();
@@ -34,10 +31,7 @@ class data extends CI_Model {
         $sql = "SELECT * FROM (
             SELECT idMovie, idSet, strSet, c00 AS `name`, c08 AS poster, IF('index.bdmv'=strFileName, LEFT(strPath, (LENGTH(strPath) - 5)), CONCAT(strPath, strFileName)) AS path, premiered FROM movie_view  WHERE ISNULL(idSet)
             UNION
-            SELECT idMovie, idSet, strSet, `name`, GROUP_CONCAT(poster) AS poster, path, premiered FROM (
-                SELECT idMovie, idSet, strSet, c00 AS `name`, c08 AS poster, '' AS path, premiered FROM movie_view WHERE !ISNULL(idSet) ORDER BY premiered DESC
-            ) AS t
-            GROUP BY t.idSet
+            SELECT idMovie, idSet, strSet, c00 AS `name`, GROUP_CONCAT(c08) AS poster, '' AS path, max(premiered) FROM movie_view WHERE !ISNULL(idSet) GROUP BY idSet
         ) AS tt
         ORDER BY tt.premiered DESC LIMIT ".$start.", ".$page_count;
         $query= $this->db->query($sql);
