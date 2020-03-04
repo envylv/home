@@ -8,4 +8,4 @@
     <div style="float:left;width:50%;text-align:center;padding-top:10%"><a style="color:#00faff;font-size:120px;text-decoration: none;" href="videoList/movie">电影</a></div>
     <div style="float:left;width:50%;text-align:center;padding-top:10%"><a style="color:#00faff;font-size:120px;text-decoration: none;" href="videoList/show">剧集</a></div>
 </body>
-</html
+</html>
